@@ -17,5 +17,9 @@ fetch(url)
 .then(res => res.json())
 .then((out) => {
   console.log(`Are you a? `+out.gender);
+  const haha = readline.question("Say ? ");
+  if(haha == "yes"){
+    console.log("I know that.. :-p");
+  }
 })
 .catch(err => { throw err });
