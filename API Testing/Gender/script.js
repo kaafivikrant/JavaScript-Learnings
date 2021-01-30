@@ -5,17 +5,17 @@
 //     document.getElementById("demo").innerHTML = x;
 // }
 
-try {
-    var GenderApi = require('gender-api.com-client');
+const fetch = require("node-fetch");
+var readline = require('readline-sync');
 
-    var genderApiClient = new GenderApi.Client('GoWXtENFNyaNcVyDxV');
+const name = readline.question("What is your name? ");
 
-    genderApiClient.getByFirstName('Vikrant', function (response) {
-        console.log(response.gender); //female
-        //console.log(response.accuracy); //98
-    });
 
-}
-catch(e) {
-    console.log('Error:', e);
-}
+let url = `https://api.genderize.io/?name=${name}`;
+
+fetch(url)
+.then(res => res.json())
+.then((out) => {
+  console.log(`Are you a? `+out.gender);
+})
+.catch(err => { throw err });

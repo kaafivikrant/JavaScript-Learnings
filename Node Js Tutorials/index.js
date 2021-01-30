@@ -70,6 +70,46 @@
 //Client errors 400-499
 //Server Errors 500-599
 
+const fs=require("fs");
 
- 
+//  const bioData = {
+//      name: "Vikrant",
+//      age: 22,
+//      gender: "M",
+//      Location: "Delhi"
+//  }
+
+//console.log(bioData.gender);
+
+//const jsonData = JSON.stringify(bioData);
+
+// fs.writeFile('Data.json',jsonData,(err)=>{
+//     console.log("Done");
+// });
+
+
+// console.log(
+//     jsonData.age
+// );
+
+//const bojData = JSON.parse(jsonData);
+
+// fs.readFile("./Data.json","utf-8",(err,data)=>{
+//    console.log(data); 
+// });
+
+// console.log(
+//   bioData  
+// );
+
+
+
+
+
+
+
+
+
+
+
 
