@@ -2,9 +2,12 @@ const readline = require("readline-sync");
 const validator = require("email-validator");
 const nodemailer = require("nodemailer");
 const generator = require("generate-password");
-//const isNumber = require("is-number");
 const smtpTransport = require('nodemailer-smtp-transport');
-//const mailer = require("./mailer");
+
+//////////////////////////////////////////////////////////////////////
+//                 let id = ''; // Enter Email                      //
+//                 let password = ""; //Enter password              //
+//////////////////////////////////////////////////////////////////////
 
 
 console.log("Enter the details:- ");
@@ -46,37 +49,6 @@ var finalpassword = generator.generate({
     symbols: symbolbool,
     numbers: numberbool
 });
-
-//console.log(password);
-
-let id = ''; // Enter Email
-let password = ""; //Enter password
-
-// var transporter = nodemailer.createTransport({
-//     hostname:'smtp.gmail.com',
-//     port:465,
-//     secure:false,
-//     ignoreTLS: true,
-//     auth:{
-//         user: id,
-//         pass: password
-//     }
-// });
-
-// var mailOptions={
-//     from: id,
-//     to: email,
-//     subject: `Hey ${name} I have a password for you`,
-//     text: `Your password for ${website} is ${finalpassword}`
-// }
-
-// transporter.sendMail(mailOptions,function(err, info){
-//     if(err){
-//         console.log(err);
-//     }else{
-//         console.log("Email sent !!"),info.response;
-//     }
-// })
 
 var transporter = nodemailer.createTransport(smtpTransport({
   service: 'gmail',
