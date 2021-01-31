@@ -1,0 +1,19 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "password manager with email ",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vikrant",
+  "license": "ISC",
+  "dependencies": {
+    "email-validator": "^2.0.4",
+    "generate-password": "^1.6.0",
+    "is-number": "^7.0.0",
+    "loadtest": "^5.1.2",
+    "nodemailer": "^6.4.17",
+    "readline-sync": "^1.4.10"
+  }
+}

@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/kaafivikrant/JavaScript-Learnings#readme",
   "dependencies": {
+    "loadtest": "^5.1.2",
     "nodemon": "^2.0.7"
-  }
+  },
+  "devDependencies": {}
 }
