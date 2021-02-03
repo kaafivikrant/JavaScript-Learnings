@@ -15,31 +15,16 @@
 // // 
 
 // Promises
- 
+
 // pending
 // resolve
 // reject
 
-// // var is function scope
-// // let is block scoped
-// // const is unchangeable
+// var is function scope
+// let is block scoped
+// const is unchangeable
 
 
-// // let myPromise = new Promise(function(resolve, reject){
-// //     resolve(); //Success
-// //     reject(); //Reject
-// // });
-
-// // myPromise.then(
-// //     function(function(){
-
-//        }){
-
-// //     },
-// //     function(error){
-
-// //     }
-// // );
 
 // // callback function
 
@@ -68,7 +53,6 @@
 
 // FunA(FunB);
 
-
 // var promise = new Promise(function(resolve, reject) { 
 //     const x = "geeksforgeeks"; 
 //     const y = "geeksforeeks"
@@ -78,7 +62,7 @@
 //       reject(); 
 //     } 
 //   }); 
-    
+
 //   promise. 
 //       then(function () { 
 //           console.log('Success, You are a GEEK'); 
@@ -86,7 +70,6 @@
 //       catch(function () { 
 //           console.log('Some error has occured'); 
 //       }); 
-
 
 //Closures
 
@@ -128,10 +111,6 @@
 
 // a();
 
-// Async Await
-
-
-
 
 // // Hello is alerted repeatedly after every 3 seconds
 // let timerId= setInterval(() => alert('Hello'), 3000);
@@ -140,27 +119,60 @@
 // setTimeout(() => { clearInterval(timerId); alert('Bye'); }, 6000);
 
 
-function scaryClown() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve('🤡');
-      }, 2000);
-    });
-  }
+// Async Await
+// function scaryClown() {
+//     return new Promise(resolve => {
+//       setTimeout(() => {
+//         resolve('😱');
+//       }, 2000);
+//     });
+//   }
   
-  async function msg() {
-    const msg = await scaryClown();
-    console.log('Message:', msg);
-  }
+//   async function msg() {
+//     const msg = await scaryClown();
+//     console.log('Message:', msg);
+//   }
   
-  msg(); // Message: 🤡 <-- after 2 seconds
+// msg(); // Message: 😱 <-- after 2 seconds
 
 
 
 
+//Exports
+
+// const getName = () => {
+//     return 'Jim';
+//   };
+  
+//   const getLocation = () => {
+//     return 'Munich';
+//   };
+  
+//   const dateOfBirth = '12.01.1982';
+  
+//   exports.getName = getName;
+//   exports.getLocation = getLocation;
+//   exports.dob = dateOfBirth;
 
 
 
+//   const user = require('./user');
+//   console.log(
+//     `${user.getName()} lives in ${user.getLocation()} and was born on ${user.dob}.`
+//   );
+
+
+//Simple Server
+
+// var express = require('express');
+// var app = express();
+// app.get('/', function (req, res) {
+//   res.send('Hello World!');
+// });
+
+// app.listen(3000, function () {
+//   console.log('Example app listening on port 3000!');
+// });
 
 
 
