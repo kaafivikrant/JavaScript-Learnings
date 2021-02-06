@@ -5,8 +5,8 @@ const generator = require("generate-password");
 const smtpTransport = require('nodemailer-smtp-transport');
 
 //////////////////////////////////////////////////////////////////////
-//                 let id = ''; // Enter Email                      //
-//                 let password = ""; //Enter password              //
+                 let id = 'kaafivikrant@gmail.com';                      //
+                 let password = "LoLgoogle1!"; //Enter password              //
 //////////////////////////////////////////////////////////////////////
 
 
@@ -36,19 +36,22 @@ if(numberbool != ''){
     numberbool = true;
 }
 
+var finalpassword = generator.generate({
+  length: size,
+  symbols: symbolbool,
+  numbers: numberbool
+});
+
 let email;
 const emailask = readline.question("Do you want to send your password to email ?");
 if(emailask == "yes"){
     do{
         email = readline.question("What is your email:- ");
     }while(!validator.validate(email));
+}else if(emailask == "no"){
+  console.log(finalpassword);
 }
 
-var finalpassword = generator.generate({
-    length: size,
-    symbols: symbolbool,
-    numbers: numberbool
-});
 
 var transporter = nodemailer.createTransport(smtpTransport({
   service: 'gmail',
@@ -74,7 +77,7 @@ transporter.sendMail(mailOptions, function(error, info){
   }
 });
 
-
+// 10 diff. smae email rou12 
 
 
 
