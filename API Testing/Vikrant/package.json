@@ -1,5 +1,5 @@
 {
-  "name": "sanyathisside",
+  "name": "kaafivikrant",
   "version": "1.0.0",
   "description": "",
   "main": "indes.js",
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "bin":{
-    "sanyathisside":"./indes.js"
+    "kaafivikrant":"./index.js"
   }
 }

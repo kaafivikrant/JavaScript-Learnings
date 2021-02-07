@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const readline = require("readline-sync");
 const validator = require("email-validator");
 const nodemailer = require("nodemailer");
