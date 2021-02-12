@@ -7,8 +7,8 @@ const generator = require("generate-password");
 const smtpTransport = require('nodemailer-smtp-transport');
 
 //////////////////////////////////////////////////////////////////////
-                 let id = 'kaafivikrant@gmail.com';                      //
-                 let password = "LoLgoogle1!"; //Enter password              //
+                 //let id = 'kaafivikrant@gmail.com';                      //
+                 l//et password = "LoLgoogle1!"; //Enter password              //
 //////////////////////////////////////////////////////////////////////
 
 
