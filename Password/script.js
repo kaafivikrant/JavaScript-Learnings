@@ -8,7 +8,7 @@ const smtpTransport = require('nodemailer-smtp-transport');
 
 //////////////////////////////////////////////////////////////////////
                  //let id = '';                      //
-                 l//et password = ""; //Enter password              //
+                 //let password = ""; //Enter password              //
 //////////////////////////////////////////////////////////////////////
 
 
