@@ -12,6 +12,7 @@ and you will see [] means empty database
 Now lets add more data to the local database
 
 Open postman in POST in " http://localhost:5000/users/ " and add the data
+go to body->raw->JSON
 
 {
     "firstname": "Vikrant",
