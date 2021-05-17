@@ -1,0 +1,42 @@
+# Flow for using the pipeline 
+# Bitbucket -> Pipelines -> Run pipeline -> Select the branch and specific pipeline -> Run
+
+image: python:3.6.9
+pipelines:
+  branches:
+    staging:
+        - step:
+            name: Pull from staging
+            script:
+                - git fetch
+                # master will be replaced by the branch we want to fetch
+                - git checkout -b master
+                - git merge Dev
+                - git push -v --tags origin master:master
+        - step:
+            name: Testing from staging
+            script:
+                - git fetch
+        - step:
+            name: Deployment from staging
+            deployment: staging
+            script:
+            # Replace it by the deployer
+            - pipe: atlassian/scp-deploy:0.3.3
+            # Add Environment variables
+              variables:
+                USER: $USER
+                SERVER: $SERVER
+            - echo "Running the staging.sh"
+            - ssh $USER@$SERVER cd esamudaay_platform/docker; ./deploy-staging.sh --no-pull --master
+    prod:
+        - step:
+            deployment: Production
+            script:
+            # Replace it by the deployer
+            - pipe: atlassian/scp-deploy:0.3.3
+            # Add Environment variables
+              variables:
+                USER: $USER
+                SERVER: $SERVER
+            - ssh $USER@$SERVER cd esamudaay_platform/docker/deploy-prod.sh
