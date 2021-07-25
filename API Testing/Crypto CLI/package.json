@@ -1,14 +1,15 @@
 {
-  "name": "dynamodb",
+  "name": "crypto-cli",
   "version": "1.0.0",
   "description": "",
-  "main": "read.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.912.0"
+    "request-promise": "^4.2.6"
   }
 }

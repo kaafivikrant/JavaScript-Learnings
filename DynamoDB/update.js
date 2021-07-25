@@ -10,30 +10,18 @@ let docClient = new AWS.DynamoDB.DocumentClient();
 
 let modify = function () {
 
-    
     var params = {
         TableName: "Testing",
-        Key: { "users": "Nitin" },
-        UpdateExpression: "set updated_by = :byUser, is_deleted = :boolValue",
+        Key: { 
+            "users": "Nitin" 
+        },
+        UpdateExpression: "set work = :w",
         ExpressionAttributeValues: {
-            ":byUser": "updateUser",
-            ":boolValue": true
+            ":w":"frontend"
         },
         ReturnValues: "UPDATED_NEW"
 
     };
-    // var params = {
-    //     TableName: "Testing",
-    //     Key: { 
-    //         "users": "Nitin" 
-    //     },
-    //     UpdateExpression: "set work = :w",
-    //     ExpressionAttributeValues: {
-    //         ":w":"frontend"
-    //     },
-    //     ReturnValues: "UPDATED_NEW"
-
-    // };
     docClient.update(params, function (err, data) {
 
         if (err) {

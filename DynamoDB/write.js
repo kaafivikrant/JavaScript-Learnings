@@ -2,7 +2,7 @@ var AWS = require("aws-sdk");
 let awsConfig = {
     "region": "us-east-2",
     "endpoint": "http://dynamodb.us-east-2.amazonaws.com",
-    "accessKeyId": "AKIAZGJVKBIKGWKQYJBD", "secretAccessKey": "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"
+    "accessKeyId": "AKIAZGJVKBIKLE6HJKFF", "secretAccessKey": "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"
 };
 AWS.config.update(awsConfig);
 
@@ -11,12 +11,12 @@ let docClient = new AWS.DynamoDB.DocumentClient();
 let save = function () {
 
     var input = {
-        "users": "Sneha", 
+        "users": "gjhg", 
         "work": "backend"
     };
     var params = {
         TableName: "Testing",
-        Item:  input
+        Item: input
     };
     docClient.put(params, function (err, data) {
 
