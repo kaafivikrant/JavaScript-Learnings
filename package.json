@@ -36,5 +36,9 @@
     "request-promise": "^4.2.6",
     "url": "^0.10.3"
   },
-  "keywords": []
+  "keywords": [],
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {}
 }
